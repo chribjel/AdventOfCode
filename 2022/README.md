@@ -20,3 +20,11 @@
   * Python
     * [x] [Part 1](5/python/1.py)
     * [x] [Part 2](5/python/2.py)
+* [x] Day 6
+  * Python
+    * [x] [Part 1](6/python/1.py)
+    * [x] [Part 2](6/python/2.py)
+* [x] Day 7
+  * Python
+    * [x] [Part 1](7/python/1.py)
+    * [x] [Part 2](7/python/2.py)
