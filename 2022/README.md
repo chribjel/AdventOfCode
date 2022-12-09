@@ -32,3 +32,7 @@
   * Python
     * [x] [Part 1](8/python/1.py)
     * [x] [Part 2](8/python/2.py)
+* [x] Day 9
+  * Python
+    * [x] [Part 1](9/python/1.py)
+    * [x] [Part 2](9/python/2.py)
