@@ -36,3 +36,7 @@
   * Python
     * [x] [Part 1](9/python/1.py)
     * [x] [Part 2](9/python/2.py)
+* [x] Day 10
+  * Python
+    * [x] [Part 1](10/python/1.py)
+    * [x] [Part 2](10/python/2.py)
