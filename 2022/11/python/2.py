@@ -13,17 +13,17 @@ def read_monkeys():
                 monkey["items"] = list(map(int, monkey_input.strip().split(":")[1].strip().split(",")))
 
             elif monkey_input.strip().startswith("Operation:"):
-                f = monkey_input.strip().split("=")[-1].strip()
-                monkey["operation"] = f
+                fun = monkey_input.strip().split("=")[-1].strip()
+                monkey["operation"] = (lambda f: lambda old: eval(f))(fun)
 
             elif monkey_input.strip().startswith("Test:"):
                 true_monkey = int(input().split(" ")[-1])
                 false_monkey = int(input().split(" ")[-1])
                 divisible_by = int(monkey_input.strip().split(" ")[-1])
+
                 prod_of_divisors *= divisible_by
-                monkey["divisible_by"] = divisible_by
-                monkey["true_monkey"] = true_monkey
-                monkey["false_monkey"] = false_monkey
+
+                monkey["divisible_by"] = (lambda t, f, d: lambda worry: t if worry % d == 0 else f)(true_monkey, false_monkey, divisible_by)
 
             elif monkey_input == "":
                 monkeys.append(monkey)
@@ -46,10 +46,10 @@ for i in range(10000):
 
             # inspection starts
             monkey["inspected_items"] += 1
-            worry = eval(monkey["operation"].replace("old", str(worry)))
+            worry = monkey["operation"](worry)
 
             # monkey decides which monkey to send the item to
-            to_monkey = monkey["true_monkey"] if worry % monkey["divisible_by"] == 0 else monkey["false_monkey"]
+            to_monkey = monkey["divisible_by"](worry)
 
             # make worry the lowest possible number
             worry = worry % prod_of_divisors
