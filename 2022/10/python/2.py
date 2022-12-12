@@ -36,7 +36,6 @@ while True:
             should_add = False
         # end cycle
 
-
     except EOFError:
         break
 

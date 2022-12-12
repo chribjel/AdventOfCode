@@ -1,4 +1,3 @@
-
 items = []
 
 while True:

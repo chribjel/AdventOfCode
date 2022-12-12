@@ -1,7 +1,6 @@
-
 no_knots = 10
 
-knots = [[0,0] for _ in range(no_knots)]
+knots = [[0, 0] for _ in range(no_knots)]
 head = knots[0]
 tail = knots[-1]
 tail_visited_coordinates = {f"0,0": 1}
@@ -23,32 +22,48 @@ while True:
                 head[1] += 1
 
             for i in range(1, no_knots):
-                if knots[i][1] - knots[i-1][1] < -1:    # knot is on the right of previous knot by more than 1
+                if (
+                    knots[i][1] - knots[i - 1][1] < -1
+                ):  # knot is on the right of previous knot by more than 1
                     knots[i][1] += 1
-                    if knots[i][0] < knots[i-1][0]:     # knot is above previous knot
+                    if knots[i][0] < knots[i - 1][0]:  # knot is above previous knot
                         knots[i][0] += 1
-                    elif knots[i][0] > knots[i-1][0]:   # knot is below previous knot
+                    elif knots[i][0] > knots[i - 1][0]:  # knot is below previous knot
                         knots[i][0] -= 1
 
-                elif knots[i][1] - knots[i-1][1] > 1:   # knot is on the left of previous knot by more than 1
+                elif (
+                    knots[i][1] - knots[i - 1][1] > 1
+                ):  # knot is on the left of previous knot by more than 1
                     knots[i][1] -= 1
-                    if knots[i][0] < knots[i-1][0]:     # knot is above previous knot
+                    if knots[i][0] < knots[i - 1][0]:  # knot is above previous knot
                         knots[i][0] += 1
-                    elif knots[i][0] > knots[i-1][0]:   # knot is below previous knot
+                    elif knots[i][0] > knots[i - 1][0]:  # knot is below previous knot
                         knots[i][0] -= 1
 
-                elif knots[i][0] - knots[i-1][0] > 1:   # knot is below previous knot by more than 1
+                elif (
+                    knots[i][0] - knots[i - 1][0] > 1
+                ):  # knot is below previous knot by more than 1
                     knots[i][0] -= 1
-                    if knots[i][1] < knots[i-1][1]:     # knot is on the left of previous knot
+                    if (
+                        knots[i][1] < knots[i - 1][1]
+                    ):  # knot is on the left of previous knot
                         knots[i][1] += 1
-                    elif knots[i][1] > knots[i-1][1]:   # knot is on the right of previous knot
+                    elif (
+                        knots[i][1] > knots[i - 1][1]
+                    ):  # knot is on the right of previous knot
                         knots[i][1] -= 1
 
-                elif knots[i][0] - knots[i-1][0] < -1:  # knot is above previous knot by more than 1
+                elif (
+                    knots[i][0] - knots[i - 1][0] < -1
+                ):  # knot is above previous knot by more than 1
                     knots[i][0] += 1
-                    if knots[i][1] < knots[i-1][1]:     # knot is on the left of previous knot
+                    if (
+                        knots[i][1] < knots[i - 1][1]
+                    ):  # knot is on the left of previous knot
                         knots[i][1] += 1
-                    elif knots[i][1] > knots[i-1][1]:   # knot is on the right of previous knot
+                    elif (
+                        knots[i][1] > knots[i - 1][1]
+                    ):  # knot is on the right of previous knot
                         knots[i][1] -= 1
 
             try:

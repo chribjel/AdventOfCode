@@ -1,5 +1,6 @@
 from typing import List, Tuple
 
+
 def start_and_end(matrix: List[str]):
     start = None
     end = None
@@ -44,7 +45,7 @@ def find_path_bfs(matrix: List[str], start: Tuple[int, int], end: Tuple[int, int
 
         # get the current letter
         curr_letter = matrix[curr_idx[0]][curr_idx[1]]
-        if (curr_letter == "S"):
+        if curr_letter == "S":
             curr_letter = "a"
 
         # get the next possible positions
@@ -58,7 +59,11 @@ def find_path_bfs(matrix: List[str], start: Tuple[int, int], end: Tuple[int, int
         # for each next position
         for pos in next_pos:
             # if the next position is in bounds
-            if 0 <= pos[0] < len(matrix) and 0 <= pos[1] < len(matrix[0]) and pos not in visited:
+            if (
+                0 <= pos[0] < len(matrix)
+                and 0 <= pos[1] < len(matrix[0])
+                and pos not in visited
+            ):
                 # get the next letter
                 next_letter = matrix[pos[0]][pos[1]]
                 # if the next letter is the same or one letter higher than the current letter
@@ -67,7 +72,6 @@ def find_path_bfs(matrix: List[str], start: Tuple[int, int], end: Tuple[int, int
                     queue.append((pos, steps + 1))
 
     return None
-
 
 
 m = []

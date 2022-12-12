@@ -1,11 +1,13 @@
-
 items = []
 
 while True:
     try:
         backpacks = input()
 
-        backpack1, backpack2 = backpacks[0:len(backpacks)//2], backpacks[len(backpacks)//2:]
+        backpack1, backpack2 = (
+            backpacks[0 : len(backpacks) // 2],
+            backpacks[len(backpacks) // 2 :],
+        )
 
         for a in backpack1:
             for b in backpack2:

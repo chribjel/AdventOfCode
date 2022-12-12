@@ -1,4 +1,3 @@
-
 dir_path = []
 dir_sizes = {}
 ls = False
@@ -23,7 +22,7 @@ while True:
         elif ls:
             if lineList[0] != "dir":
                 for i in range(len(dir_path)):
-                    curr_dir = "/".join(dir_path[0:i+1])
+                    curr_dir = "/".join(dir_path[0 : i + 1])
                     if curr_dir in dir_sizes:
                         dir_sizes[curr_dir] += int(lineList[0])
                     else:

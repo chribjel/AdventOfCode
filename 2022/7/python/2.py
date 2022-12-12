@@ -1,4 +1,3 @@
-
 dir_path = []
 dir_sizes = {}
 ls = False
@@ -27,7 +26,7 @@ while True:
             if lineList[0] != "dir":
                 total_size += int(lineList[0])
                 for i in range(len(dir_path)):
-                    curr_dir = "/".join(dir_path[0:i+1])
+                    curr_dir = "/".join(dir_path[0 : i + 1])
                     if curr_dir in dir_sizes:
                         dir_sizes[curr_dir] += int(lineList[0])
                     else:
@@ -39,7 +38,7 @@ while True:
 canditate_dirs = []
 space_available = total_space - total_size
 for key in dir_sizes:
-    if dir_sizes[key] >= update_size-space_available:
+    if dir_sizes[key] >= update_size - space_available:
         canditate_dirs.append([key, dir_sizes[key]])
 
 canditate_dirs.sort(key=lambda x: x[1])

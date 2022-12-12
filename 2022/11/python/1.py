@@ -12,7 +12,9 @@ def read_monkeys():
                 monkey["inspected_items"] = 0
 
             elif monkey_input.strip().startswith("Starting items:"):
-                monkey["items"] = list(map(int, monkey_input.strip().split(":")[1].strip().split(",")))
+                monkey["items"] = list(
+                    map(int, monkey_input.strip().split(":")[1].strip().split(","))
+                )
 
             elif monkey_input.strip().startswith("Operation:"):
                 fun = monkey_input.strip().split("=")[-1].strip()
@@ -23,7 +25,9 @@ def read_monkeys():
                 false_monkey = int(input().split(" ")[-1])
                 divisible_by = int(monkey_input.strip().split(" ")[-1])
 
-                monkey["divisible_by"] = (lambda t, f, d: lambda worry: t if worry % d == 0 else f)(true_monkey, false_monkey, divisible_by)
+                monkey["divisible_by"] = (
+                    lambda t, f, d: lambda worry: t if worry % d == 0 else f
+                )(true_monkey, false_monkey, divisible_by)
 
             elif monkey_input == "":
                 monkeys.append(monkey)
@@ -37,7 +41,9 @@ def read_monkeys():
 
     return monkeys
 
+
 monkeys = read_monkeys()
+
 
 def factorize(n):
     factors = set()
@@ -46,6 +52,7 @@ def factorize(n):
             factors.add(i)
             n //= i
     return factors
+
 
 for i in range(20):
     for monkey in monkeys:
@@ -57,7 +64,7 @@ for i in range(20):
             worry = monkey["operation"](worry)
 
             # inspection ends
-            worry  = floor(worry / 3)
+            worry = floor(worry / 3)
 
             # monkey decides which monkey to send the item to
             to_monkey = monkey["divisible_by"](worry)
