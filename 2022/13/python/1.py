@@ -43,5 +43,4 @@ while True:
     except EOFError:
         break
 
-print(valid_idxs)
 print(sum(valid_idxs))
