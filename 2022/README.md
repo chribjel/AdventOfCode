@@ -52,3 +52,7 @@
   * Python
     * [x] [Part 1](13/python/1.py)
     * [x] [Part 2](13/python/2.py)
+* [x] Day 14
+  * Python
+    * [x] [Part 1](14/python/1.py)
+    * [x] [Part 2](14/python/2.py)
