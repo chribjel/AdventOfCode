@@ -1,6 +1,6 @@
 # 2023
 
-* [] Day 1
+* [x] Day 1
   * Python
-    * [] [Part 1](1/python/1.py)
-    * [] [Part 2](1/python/2.py)
+    * [x] [Part 1](1/python/1.py)
+    * [x] [Part 2](1/python/2.py)
