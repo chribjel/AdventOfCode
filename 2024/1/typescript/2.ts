@@ -1021,3 +1021,5 @@ function getInput() {
 67237   72168
 25854   59466`;
 }
+
+export {};

@@ -8,3 +8,7 @@
   * TypeScript
     * [x] [Part 1](2/typescript/1.ts)
     * [x] [Part 2](2/typescript/2.ts)
+* [x] Day 2
+  * TypeScript
+    * [x] [Part 1](3/typescript.ts)
+    * [x] [Part 1](3/typescript.ts)

@@ -1044,3 +1044,5 @@ function getInput() {
 57 55 52 51 49
 15 17 20 23 25`;
 }
+
+export {};
