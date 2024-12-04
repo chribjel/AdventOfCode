@@ -44,20 +44,8 @@ function findXmas(lineOfText: string) {
   return 0;
 }
 
-function findMas(lineOfText: string) {
-  const MASOccurrences = lineOfText.match(/MAS/g);
-  if (MASOccurrences) {
-    return MASOccurrences.length;
-  }
-  return 0;
-}
-
 function findXmasReversed(lineOfText: string) {
   return findXmas(reverseString(lineOfText));
-}
-
-function findMasReversed(lineOfText: string) {
-  return findMas(reverseString(lineOfText));
 }
 
 function part1(input: string) {
