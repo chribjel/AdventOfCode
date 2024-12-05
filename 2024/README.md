@@ -16,3 +16,7 @@
   * TypeScript
     * [x] [Part 1](4/typescript.ts)
     * [x] [Part 2](4/typescript.ts)
+* [x] Day 5
+  * TypeScript
+    * [x] [Part 1](5/typescript.ts)
+    * [x] [Part 2](5/typescript.ts)
